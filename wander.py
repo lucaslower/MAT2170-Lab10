@@ -26,8 +26,7 @@ def retraceSteps(myTurtle, myStack):
     """
     while len(myStack) != 0:
         crumb = myStack.pop()
-        myTurtle.pencolor(crumb[0])
-        myTurtle.goto(crumb[1])
+        LSysFns.resetTurtle(myTurtle, crumb)
 
         
 def wanderAround():

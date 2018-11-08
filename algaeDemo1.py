@@ -14,7 +14,7 @@ rules = {'A':'AB', 'B':'A'}
 LSysFns.displayLSystem('L-system to model algae growth', axiom, rules)
 
 # Generate and display the first few strings produced by this system
-print()
+print('  ')
 howMany = 10
 print('First %d strings produced by this system...' % howMany)
 y = LSysFns.productionYields(axiom, rules, howMany)

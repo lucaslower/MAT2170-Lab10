@@ -18,8 +18,16 @@ def readLSystem(filename):
         a pair (a, d) where a is the initial axiom for the system and d
         is a dictionary of symbol:rule pairs for the rewriting rules
     """
-    # NOT IMPLEMENTED...
-    pass
+    f = open(filename, "r")
+    rules = {}
+    for line in f:
+        if line[0] != '#' and line != None:
+            if ':=' in line:
+                l_split = line.split(':=')
+                rules[l_split[0]] = l_split[1][:-1]
+            else:
+                axiom = line[:-1]
+    return (axiom, rules)
 
 
 def displayLSystem(title, axiom, rules):
@@ -37,19 +45,12 @@ def displayLSystem(title, axiom, rules):
     print(title)
     print('-'*len(title))
     print('Axiom:')
-    print('  ', axiom)
+    print('\t'+axiom)
     print('  ')
     print('Rules:')
     # get rules
-    rule_keys = list(rules.keys())
-    for key in rule_keys:
-        print(key, ' -> ', rules[key])
-        print('  ')
-        print('First 10 strings produced by this system...')
-        l_string = axiom
-        for i in range(10):
-            print(len(l_string), ' ', l_string)
-            l_string = nextGeneration(l_string, rules)
+    for key in rules:
+        print('\t' + key, ' -> ', rules[key])
 
 
 def nextGeneration(s, rules):
@@ -108,8 +109,10 @@ def productionYields(axiom, rules, n):
     Returns:
         A list of the first n strings produced by the given L-system
     """
-    # NOT IMPLEMENTED...
-    pass
+    ret = [axiom]
+    for i in range(n-1):
+        ret.append(nextGeneration(ret[-1], rules))
+    return ret
 
 
 def interpret(myTurtle, s, dist, angle):
