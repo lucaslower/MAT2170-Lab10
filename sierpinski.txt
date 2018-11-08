@@ -1,0 +1,10 @@
+# L-system for a Sierpinski gasket
+# Suggested viewing:
+#   generation 8
+#   distance = 2
+#   angle = 60
+#   starting at (250, -200)
+#   heading west
+F
+F:=G-F-G
+G:=F+G+F

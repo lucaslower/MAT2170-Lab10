@@ -1,0 +1,9 @@
+# L-system for an axially oriented plant
+# Suggested viewing:
+#   generation 5
+#   distance = 8
+#   angle = 20
+#   starting at (0, -250)
+#   heading north
+F
+F:=F[+F]F[-F][F]

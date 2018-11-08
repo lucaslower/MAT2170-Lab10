@@ -1,0 +1,9 @@
+# L-system file for an axially oriented plant
+# Suggested viewing:
+#   generation 5
+#   distance = 2
+#   angle = 25.7
+#   staring at (0, -250) 
+#   heading north
+F
+F:=F[+F]F[-F]F

@@ -1,0 +1,7 @@
+#
+# L-System for the Koch curve
+#
+# For the “traditional” Koch curve, use a turning angle of 60 degrees
+#
+F
+F:=F-F++F-F

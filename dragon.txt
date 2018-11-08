@@ -1,0 +1,10 @@
+# L-system file for a dragon curve
+# Suggested viewing:
+#   generation 10
+#   distance = 10
+#   angle = 90
+#   starting at (-100, -50)
+#   heading north
+FX
+X:=X+YF+
+Y:=-FX-Y

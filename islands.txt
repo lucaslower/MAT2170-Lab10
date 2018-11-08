@@ -1,0 +1,10 @@
+# L-system for a figure with jumps
+# Suggested viewing
+#   generation 2
+#   distance = 8
+#   angle = 90
+#   starting at (150, -150)
+#   heading north
+F-F-F-F
+F:=F+f-FF+F+FF+Ff+FF-f+FF-F-FF-Ff-FFF
+f:=ffffff
